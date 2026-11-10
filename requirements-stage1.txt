@@ -1,0 +1,7 @@
+# Project-local compatibility overlay; use with --no-deps and temp/runtime.
+# Remaining dependencies and CUDA PyTorch come from the existing dl environment.
+transformers==4.51.3
+peft==0.15.2
+tokenizers==0.21.4
+huggingface-hub==0.30.2
+gurobipy==12.0.3

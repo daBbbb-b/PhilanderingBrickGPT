@@ -1,0 +1,17 @@
+/BrickGPT/
+/temp/
+/output/
+/data/
+/proposal/
+/proposal.tex
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.venv/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.gguf
