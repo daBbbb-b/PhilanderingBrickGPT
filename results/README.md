@@ -2,6 +2,13 @@
 
 实验 A 使用三个完整搭建示例。实验 B 使用三个局部合并示例。两组使用相同的 36 个训练尺寸组、3,600 条训练样本和固定测试任务，各训练五轮。4×4 留作生成测试。
 
+## 36 尺寸实验的两个目录
+
+- **A/B 共用的数据准备**在 [icl_lora_context_expanded_v1](icl_lora_context_expanded_v1)。[数据报告](icl_lora_context_expanded_v1/DATA_REPORT.md)记录同一批 3,600 条训练样本如何筛选和划分，以及各尺寸的几何核验结果。实际训练样本随数据包单独提供。
+- **A/B 各自的评测结果**在 [icl_lora_train_expanded_v1](icl_lora_train_expanded_v1)。[A](icl_lora_train_expanded_v1/A) 和 [B](icl_lora_train_expanded_v1/B) 各自保存五轮固定测试和最终 30 个 4×4 用例的结果。[最终对照](icl_lora_train_expanded_v1/comparison.json)可直接比较两组的提议、接受和最终使用情况。
+
+## 完整目录索引
+
 | 文件夹 | 实验与条件 | 内容 |
 |---|---|---|
 | [icl_report](icl_report) | 早期纯 ICL，使用未加实验 LoRA 的 BrickGPT，比较不同 4×4 提示策略 | 实验报告 Markdown 和 PDF |
