@@ -1,0 +1,134 @@
+{
+  "cases": 10,
+  "all_candidate_decisions": {
+    "success": 858,
+    "collision": 42,
+    "already_rejected": 176,
+    "not_in_expanded_library": 7
+  },
+  "4x4_candidate_decisions": {},
+  "accepted": 858,
+  "rejected": 225,
+  "4x4_proposals": 0,
+  "per_case": [
+    {
+      "case": "4x4_case_01",
+      "all_decisions": {
+        "success": 92,
+        "collision": 10,
+        "already_rejected": 50
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_02",
+      "all_decisions": {
+        "success": 52,
+        "collision": 5,
+        "already_rejected": 62
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_03",
+      "all_decisions": {
+        "success": 33
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_04",
+      "all_decisions": {
+        "success": 21,
+        "not_in_expanded_library": 4,
+        "already_rejected": 26
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_05",
+      "all_decisions": {
+        "success": 115,
+        "not_in_expanded_library": 1,
+        "collision": 3
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_06",
+      "all_decisions": {
+        "success": 13
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_07",
+      "all_decisions": {
+        "success": 119,
+        "collision": 6,
+        "already_rejected": 3
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_08",
+      "all_decisions": {
+        "success": 84,
+        "collision": 7,
+        "already_rejected": 27,
+        "not_in_expanded_library": 1
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    },
+    {
+      "case": "4x4_case_09",
+      "all_decisions": {
+        "success": 192,
+        "collision": 7,
+        "already_rejected": 5
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "brick_limit"
+    },
+    {
+      "case": "4x4_case_10",
+      "all_decisions": {
+        "success": 137,
+        "collision": 4,
+        "not_in_expanded_library": 1,
+        "already_rejected": 3
+      },
+      "4x4_decisions": {},
+      "4x4_candidates": [],
+      "final_4x4": 0,
+      "stop_reason": "eos"
+    }
+  ],
+  "rerun_required": false
+}

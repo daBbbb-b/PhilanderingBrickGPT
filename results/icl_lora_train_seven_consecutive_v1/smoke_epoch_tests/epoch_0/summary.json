@@ -1,0 +1,16 @@
+[
+  {
+    "group": "2x3",
+    "completed": 1,
+    "planned": 1,
+    "any_new": 0,
+    "finished_with_new": 0
+  },
+  {
+    "group": "4x4",
+    "completed": 1,
+    "planned": 1,
+    "any_new": 0,
+    "finished_with_new": 0
+  }
+]

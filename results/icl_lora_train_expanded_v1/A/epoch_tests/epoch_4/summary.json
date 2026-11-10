@@ -1,0 +1,250 @@
+{
+  "completed": 20,
+  "planned": 20,
+  "groups": {
+    "2x3": {
+      "completed": 5,
+      "planned": 5,
+      "tasks_proposing": 4,
+      "proposals": 14,
+      "accepted": 12,
+      "rejected": 2,
+      "tasks_using": 3,
+      "finished_with_new": 3
+    },
+    "3x8": {
+      "completed": 5,
+      "planned": 5,
+      "tasks_proposing": 4,
+      "proposals": 58,
+      "accepted": 17,
+      "rejected": 41,
+      "tasks_using": 4,
+      "finished_with_new": 3
+    },
+    "4x4": {
+      "completed": 10,
+      "planned": 10,
+      "tasks_proposing": 6,
+      "proposals": 17,
+      "accepted": 14,
+      "rejected": 3,
+      "tasks_using": 5,
+      "finished_with_new": 5
+    }
+  },
+  "cases": [
+    {
+      "task_id": "2x3_case_01",
+      "group": "2x3",
+      "proposed": 1,
+      "accepted": 0,
+      "decisions": {
+        "collision": 1
+      },
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "2x3_case_02",
+      "group": "2x3",
+      "proposed": 7,
+      "accepted": 6,
+      "decisions": {
+        "success": 6,
+        "out_of_bounds": 1
+      },
+      "final": 6,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "2x3_case_03",
+      "group": "2x3",
+      "proposed": 5,
+      "accepted": 5,
+      "decisions": {
+        "success": 5
+      },
+      "final": 5,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "2x3_case_04",
+      "group": "2x3",
+      "proposed": 1,
+      "accepted": 1,
+      "decisions": {
+        "success": 1
+      },
+      "final": 1,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "2x3_case_05",
+      "group": "2x3",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "3x8_case_01",
+      "group": "3x8",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "3x8_case_02",
+      "group": "3x8",
+      "proposed": 42,
+      "accepted": 1,
+      "decisions": {
+        "success": 1,
+        "collision": 1,
+        "already_rejected": 40
+      },
+      "final": 1,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "3x8_case_03",
+      "group": "3x8",
+      "proposed": 5,
+      "accepted": 5,
+      "decisions": {
+        "success": 5
+      },
+      "final": 5,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "3x8_case_04",
+      "group": "3x8",
+      "proposed": 10,
+      "accepted": 10,
+      "decisions": {
+        "success": 10
+      },
+      "final": 10,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "3x8_case_05",
+      "group": "3x8",
+      "proposed": 1,
+      "accepted": 1,
+      "decisions": {
+        "success": 1
+      },
+      "final": 1,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "4x4_case_01",
+      "group": "4x4",
+      "proposed": 3,
+      "accepted": 3,
+      "decisions": {
+        "success": 3
+      },
+      "final": 3,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "4x4_case_02",
+      "group": "4x4",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "4x4_case_03",
+      "group": "4x4",
+      "proposed": 3,
+      "accepted": 3,
+      "decisions": {
+        "success": 3
+      },
+      "final": 3,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "4x4_case_04",
+      "group": "4x4",
+      "proposed": 4,
+      "accepted": 4,
+      "decisions": {
+        "success": 4
+      },
+      "final": 4,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "4x4_case_05",
+      "group": "4x4",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "4x4_case_06",
+      "group": "4x4",
+      "proposed": 3,
+      "accepted": 3,
+      "decisions": {
+        "success": 3
+      },
+      "final": 3,
+      "finished_with_new": true
+    },
+    {
+      "task_id": "4x4_case_07",
+      "group": "4x4",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "4x4_case_08",
+      "group": "4x4",
+      "proposed": 0,
+      "accepted": 0,
+      "decisions": {},
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "4x4_case_09",
+      "group": "4x4",
+      "proposed": 3,
+      "accepted": 0,
+      "decisions": {
+        "collision": 2,
+        "already_rejected": 1
+      },
+      "final": 0,
+      "finished_with_new": false
+    },
+    {
+      "task_id": "4x4_case_10",
+      "group": "4x4",
+      "proposed": 1,
+      "accepted": 1,
+      "decisions": {
+        "success": 1
+      },
+      "final": 1,
+      "finished_with_new": true
+    }
+  ]
+}

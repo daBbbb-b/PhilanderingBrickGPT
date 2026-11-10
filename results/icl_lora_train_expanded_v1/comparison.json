@@ -1,0 +1,26 @@
+{
+  "a": {
+    "4x4": {
+      "completed": 30,
+      "planned": 30,
+      "tasks_proposing": 21,
+      "proposals": 44,
+      "accepted": 41,
+      "rejected": 3,
+      "tasks_using": 20,
+      "finished_with_new": 17
+    }
+  },
+  "b": {
+    "4x4": {
+      "completed": 30,
+      "planned": 30,
+      "tasks_proposing": 23,
+      "proposals": 96,
+      "accepted": 64,
+      "rejected": 32,
+      "tasks_using": 23,
+      "finished_with_new": 21
+    }
+  }
+}

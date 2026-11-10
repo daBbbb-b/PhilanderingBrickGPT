@@ -1,0 +1,85 @@
+[
+  {
+    "group": "1x3",
+    "model": "before",
+    "completed": 10,
+    "planned": 10,
+    "any_new": 0,
+    "finished_with_new": 0,
+    "eos": 9,
+    "connected": 0,
+    "candidate_retries": 21,
+    "connectivity_rollbacks": 0,
+    "stop_reasons": {
+      "eos": 9,
+      "brick_limit": 1
+    }
+  },
+  {
+    "group": "1x3",
+    "model": "after",
+    "completed": 10,
+    "planned": 10,
+    "any_new": 10,
+    "finished_with_new": 5,
+    "eos": 5,
+    "connected": 5,
+    "candidate_retries": 265,
+    "connectivity_rollbacks": 0,
+    "stop_reasons": {
+      "rejection_limit": 4,
+      "eos": 5,
+      "brick_limit": 1
+    }
+  },
+  {
+    "group": "2x3",
+    "model": "after",
+    "completed": 10,
+    "planned": 10,
+    "any_new": 9,
+    "finished_with_new": 5,
+    "eos": 5,
+    "connected": 4,
+    "candidate_retries": 437,
+    "connectivity_rollbacks": 0,
+    "stop_reasons": {
+      "brick_limit": 2,
+      "eos": 5,
+      "rejection_limit": 3
+    }
+  },
+  {
+    "group": "2x8",
+    "model": "after",
+    "completed": 9,
+    "planned": 10,
+    "any_new": 3,
+    "finished_with_new": 2,
+    "eos": 6,
+    "connected": 2,
+    "candidate_retries": 185,
+    "connectivity_rollbacks": 0,
+    "stop_reasons": {
+      "brick_limit": 1,
+      "rejection_limit": 2,
+      "eos": 6
+    }
+  },
+  {
+    "group": "4x4",
+    "model": "after",
+    "completed": 10,
+    "planned": 10,
+    "any_new": 0,
+    "finished_with_new": 0,
+    "eos": 9,
+    "connected": 5,
+    "candidate_retries": 225,
+    "connectivity_rollbacks": 0,
+    "stop_reasons": {
+      "eos": 9,
+      "brick_limit": 1
+    }
+  }
+]

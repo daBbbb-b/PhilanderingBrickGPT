@@ -2,6 +2,13 @@
 
 Experiment A uses three complete assembly demonstrations. Experiment B uses three local merge demonstrations. Both use the same 36 training size groups and hold out 4×4 for evaluation.
 
+## Experiment reports and results
+
+- [Full experiment report](results/brickgpt_lora_icl_experiment_report.md)
+- [Early ICL report](results/icl_report/experiment_report.md)
+- [Final 30-case A/B comparison](results/icl_lora_train_expanded_v1/comparison.json)
+- [Visualization gallery](results/GALLERY.md) with ten outputs from five matched 4×4 tasks
+
 ## Local setup
 
 Use Python 3.12 and a CUDA-enabled PyTorch installation with BF16 support. Clone the upstream dependency at the revision used in the experiments.

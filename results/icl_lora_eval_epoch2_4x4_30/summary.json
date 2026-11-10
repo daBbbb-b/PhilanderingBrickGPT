@@ -1,0 +1,10 @@
+{
+  "completed_tasks": 30,
+  "planned_tasks": 30,
+  "tasks_with_4x4_proposal": 3,
+  "total_4x4_proposals": 8,
+  "total_4x4_accepted": 1,
+  "total_4x4_rejected": 7,
+  "tasks_with_final_4x4": 1,
+  "tasks_finished_with_4x4": 1
+}
