@@ -7,7 +7,7 @@ Experiment A uses three complete assembly demonstrations. Experiment B uses thre
 - [Full experiment report](results/brickgpt_lora_icl_experiment_report.md)
 - [Early ICL report](results/icl_report/experiment_report.md)
 - [Final 30-case A/B comparison](results/icl_lora_train_expanded_v1/comparison.json)
-- [Visualization gallery](results/GALLERY.md) with ten outputs from five matched 4×4 tasks
+- [Visualization gallery](results/GALLERY.md) with twenty outputs from ten matched 4×4 tasks
 
 ## Local setup
 
