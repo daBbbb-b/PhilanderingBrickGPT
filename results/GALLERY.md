@@ -1,6 +1,6 @@
-# Matched 4×4 outputs
+# 4×4 测试可视化
 
-The first ten fixed tasks, in test order. A uses full-assembly examples. B uses local-merge examples.
+按固定测试顺序展示前 10 个用例。A 使用完整搭建示例，B 使用局部合并示例。
 
 ## 4x4_case_01
 

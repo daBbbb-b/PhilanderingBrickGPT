@@ -1,10 +1,8 @@
-# Expanded brick ICL data
+# 36 尺寸 A/B 数据报告
 
-Samples per experiment: {'train': 3600, 'validation': 900, 'test': 900}.
-Geometry verified: 487579 variants, 1207361 merges.
-Fixed test structure overlap with training: 0. Epoch tests: 20. Final tests: 30.
+每组实验使用 3,600 条训练样本，另准备 900 条验证和 900 条测试样本。几何核验覆盖 487,579 个改装版本和 1,207,361 处合并。固定测试与训练的结构 ID 重叠为 0。逐轮评测有 20 个用例，最终评测有 30 个用例。
 
-| Size | Candidates | Top 500 | Selected | Train/val/test structures | Training samples |
+| 尺寸 | 候选结构 | 占比前 500 | 最终入选 | 训练/验证/测试结构 | 实际训练样本 |
 |---|---:|---:|---:|---|---:|
 | 1x3 | 34961 | 500 | 250 | 200/25/25 | 100 |
 | 1x5 | 26557 | 500 | 250 | 200/25/25 | 100 |

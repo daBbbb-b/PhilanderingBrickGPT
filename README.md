@@ -1,17 +1,17 @@
-# BrickGPT LoRA and in-context learning
+# BrickGPT LoRA 微调与上下文学习
 
-Experiment A uses three complete assembly demonstrations. Experiment B uses three local merge demonstrations. Both use the same 36 training size groups and hold out 4×4 for evaluation.
+实验 A 使用三个完整搭建示例，实验 B 使用三个局部合并示例。两组共享 36 个训练尺寸组，4×4 留作评测。
 
-## Experiment reports and results
+## 实验报告与结果
 
-- [Full experiment report](results/brickgpt_lora_icl_experiment_report.md)
-- [Early ICL report](results/icl_report/experiment_report.md)
-- [Final 30-case A/B comparison](results/icl_lora_train_expanded_v1/comparison.json)
-- [Visualization gallery](results/GALLERY.md) with twenty outputs from ten matched 4×4 tasks
+- [结果目录说明](results/README.md)
+- [实验总报告](results/brickgpt_lora_icl_experiment_report.md)和[早期纯 ICL 报告](results/icl_report/experiment_report.md)
+- [最终 30 个用例的 A/B 对照](results/icl_lora_train_expanded_v1/comparison.json)
+- [可视化图集](results/GALLERY.md)展示相同 10 个 4×4 任务的 A/B 输出，共 20 张图
 
-## Local setup
+## 本地环境
 
-Use Python 3.12 and a CUDA-enabled PyTorch installation with BF16 support. Clone the upstream dependency at the revision used in the experiments.
+使用 Python 3.12 和支持 BF16 的 CUDA 版 PyTorch。将上游 BrickGPT 切换到实验使用的版本。
 
 ```powershell
 git clone https://github.com/AvaLovelace1/BrickGPT.git
@@ -20,32 +20,32 @@ python -m pip install -r requirements-stage1.txt
 python -m pip install "numpy<2" matplotlib accelerate networkx
 ```
 
-Place the Llama-3.2-1B-Instruct checkpoint in `temp/models/Llama-3.2-1B-Instruct/` and the original BrickGPT adapter and tokenizer in `temp/models/BrickGPT/`. The runner also accepts a locally cached Llama checkpoint in its configured Hugging Face cache.
+将 Llama-3.2-1B-Instruct 权重放在 `temp/models/Llama-3.2-1B-Instruct/`，将原始 BrickGPT adapter 和 tokenizer 放在 `temp/models/BrickGPT/`。脚本也支持从已配置的本地 Hugging Face 缓存读取 Llama 权重。
 
-## Data and execution
+## 数据和运行
 
-Download the required ZIP files from Google Drive and extract them into the project's `data/` directory. Each ZIP includes its own top-level directory.
+从 Google Drive 下载所需 ZIP 并解压到项目的 `data/`。压缩包自带对应的子目录。
 
-| Archive | Location after extraction | Contents |
+| 压缩包 | 解压后的目录 | 内容 |
 |---|---|---|
-| `brickgpt_icl_ab_v1.zip` | `data/brickgpt_icl_ab_v1/` | Prepared A/B samples, fixed evaluations, and data audit |
-| `stabletext2brick_raw_v1.zip` | `data/stabletext2brick_raw_v1/` | Seven original StableText2Brick Parquet shards and source metadata |
-| `brickgpt_icl_ab_rebuild_inputs_v1.zip` | `data/brickgpt_icl_ab_rebuild_inputs_v1/` | Normalized source structures and fixed target manifests |
+| `brickgpt_icl_ab_v1.zip` | `data/brickgpt_icl_ab_v1/` | A/B 样本、固定评测和数据核验报告 |
+| `stabletext2brick_raw_v1.zip` | `data/stabletext2brick_raw_v1/` | 七个原始 Parquet 分片和来源信息 |
+| `brickgpt_icl_ab_rebuild_inputs_v1.zip` | `data/brickgpt_icl_ab_rebuild_inputs_v1/` | 标准化结构和固定测试目标清单 |
 
-Only the prepared archive is required to train and evaluate. To regenerate it locally, extract the rebuild inputs archive and run `python scripts/prepare_context_expanded.py`. This writes the prepared files to `data/brickgpt_icl_ab_v1/`. The raw archive is for inspecting the original dataset.
+训练和评测只需第一个包。重建样本时，解压重建输入包，再运行 `python scripts/prepare_context_expanded.py`，输出到 `data/brickgpt_icl_ab_v1/`。原始数据包可用于查阅 StableText2Brick 数据。
 
 ```powershell
 Expand-Archive -LiteralPath .\brickgpt_icl_ab_v1.zip -DestinationPath .\data
 ```
 
-Google Drive links are pending. Compare downloads with the accompanying `SHA256SUMS.txt`.
+Google Drive 下载链接待补充。可用随包提供的 `SHA256SUMS.txt` 校验下载文件。
 
-Run `python -u scripts/train_lora_expanded.py`. It trains and evaluates A, then B, and writes progress and checkpoints under `output/icl_lora_train_expanded_v1/`.
+运行 `python -u scripts/train_lora_expanded.py`，程序依次完成 A、B 的训练与评测。进度和 checkpoint 保存到 `output/icl_lora_train_expanded_v1/`。
 
-The generation syntax mask matches the recorded evaluations and permits brick dimensions 1–8. Training data also includes size groups with a side of 9.
+已记录评测的生成语法约束允许边长 1–8。训练数据还包含边长为 9 的尺寸组。
 
-## Trained adapters
+## 微调权重
 
-The final adapters are stored locally in `A/checkpoints/step_2250/` and `B/checkpoints/step_2250/` under the training output directory. Distribute each PEFT adapter as `adapter_config.json` and `adapter_model.safetensors`. Keep the matching tokenizer files with the release if consumers need them. The adapter expects the original BrickGPT merged into the Llama base. The training state is only needed for resuming training.
+最终 adapter 分别位于训练输出目录下的 `A/checkpoints/step_2250/` 和 `B/checkpoints/step_2250/`。发布文件包括 `adapter_config.json`、`adapter_model.safetensors` 和对应的 tokenizer。使用时先将原始 BrickGPT 合并到 Llama 基座，再加载实验 adapter。续训需要另外保留训练状态。
 
-Google Drive links will be added after the adapters are uploaded. Data, caches, and weights are excluded from Git.
+数据、缓存和权重通过 Git 忽略规则排除。权重的 Google Drive 链接待补充。
